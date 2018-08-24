@@ -1,0 +1,10 @@
+package com.gmail.pci2676;
+
+public class StudentInfo {
+
+	private Student student;
+	
+	public StudentInfo() {
+		
+	}
+}

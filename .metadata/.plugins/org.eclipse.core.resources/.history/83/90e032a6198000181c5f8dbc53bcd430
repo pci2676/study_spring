@@ -1,0 +1,35 @@
+package com.gmail.pci2676;
+
+public class OtherStudent {
+	private String name;
+	private int age;
+
+	
+	public OtherStudent(String name,int age) {
+		this.name=name;
+		this.age=age;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	//빈이 생성될때 이러한 메소드가 실행됬으면 좋겠다
+	//싶을때 아래와 같은 어노테이션을 적어준다.
+	@Postconstruct
+	public void initMethod() {
+		
+	}
+}
