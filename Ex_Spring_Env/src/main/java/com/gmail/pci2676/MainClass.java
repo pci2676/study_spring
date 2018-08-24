@@ -29,6 +29,7 @@ public class MainClass {
 		}
 		
 	
+		// ctx에서 설정한 Environment 사용하기 위해
 		GenericXmlApplicationContext gCtx = (GenericXmlApplicationContext)ctx;
 		gCtx.load("classpath:applicationCTX.xml");
 		gCtx.refresh();
