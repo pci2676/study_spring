@@ -8,6 +8,7 @@
 	<bean id="logAop" class="com.gmail.pci2676.LogAop" />
 
 	<aop:config>
+	<!-- 공통기능을 aspect라 한다. -->
 		<aop:aspect id="logger" ref="logAop">
 		<!-- pointcut: within한 곳 전부에 적용할건데 그걸 publicM이라는 이름으로 만들어 두었다. -->
 			<aop:pointcut expression="within(com.gmail.pci2676.Student||com.gmail.pci2676.Worker)"
