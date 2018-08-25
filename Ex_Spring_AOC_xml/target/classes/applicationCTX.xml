@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<bean id="logAop" class="com.gmail.pci2676.LogAop" />
+
+	<aop:config>
+		<aop:aspect id="logger" ref="logAop">
+		<!-- pointcut: within한 곳 전부에 적용할건데 그걸 publicM이라는 이름으로 만들어 두었다. -->
+			<aop:pointcut expression="within(com.gmail.pci2676.Student||com.gmail.pci2676.Worker)"
+				id="publicM" />
+				<!-- loggerAop라는 메소드를 publicM으로 지정한 곳에 적용한다. -->
+			<aop:around pointcut-ref="publicM" method="loggerAop" />
+		</aop:aspect>
+	</aop:config>
+
+	<bean id="student" class="com.gmail.pci2676.Student">
+		<property name="name" value="박찬인" />
+		<property name="age" value="26" />
+		<property name="grade" value="3" />
+	</bean>
+
+	<bean id="worker" class="com.gmail.pci2676.Worker">
+		<property name="name" value="박찬인" />
+		<property name="age" value="26" />
+		<property name="department" value="wireless" />
+	</bean>
+
+</beans>
