@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 
+DTD란?
+DTD는 하나의 시스템 내에서 사용할 XML 데이터의 구조를 정의하여 유효성을 점검할 때 사용하며 스키마는 서로 다른 시스템 사이의 데이터를 주고 받아 사용할 수 있게 데이터 표준화를 위해 제공하고 있습니다.
+프로그램 방식으로 데이터를 처리할 때는 명확하게 문서의 구조를 정의하고 이를 기반으로 데이터 소스를 목적에 맞게 사용할 때 DTD나 스키마를 통해 안정성을 제공할 수 있습니다.
+ -->
+
+<configuration>
+
+</configuration>
