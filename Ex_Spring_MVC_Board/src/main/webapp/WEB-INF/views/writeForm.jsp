@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Write Form Page</title>
+<title>Write Form Page </title>
 </head>
 <body>
 

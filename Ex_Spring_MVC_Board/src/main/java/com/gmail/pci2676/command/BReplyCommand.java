@@ -1,5 +1,13 @@
 package com.gmail.pci2676.command;
 
-public class BReplyCommand {
+import org.springframework.ui.Model;
+
+public class BReplyCommand implements BCommand{
+
+	@Override
+	public void excute(Model model) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

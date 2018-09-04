@@ -6,6 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.ui.Model;
 
+import com.gmail.pci2676.dao.BDao;
+import com.gmail.pci2676.dto.BDto;
+
 public class BContentCommand implements BCommand {
 
 	@Override
@@ -17,7 +20,7 @@ public class BContentCommand implements BCommand {
 		String bId = req.getParameter("bId");
 		
 		BDao dao = new BDao();
-		BDto dto = dao.contentView(bid);
+		BDto dto = dao.contentView(bId);
 		
 		model.addAttribute("content_view",dto);
 	}
