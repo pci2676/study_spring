@@ -37,7 +37,14 @@ public class BDao {
 		//DB에서 해당하는 항목 alter하는 작업
 	}
 	
-	public void delete(String bId) {
+	public void delete(String strId) {
 		//DB에서 해당하는 id delete 하는 작업
+	}
+	
+	public BDto reply_view(String strId) {
+		//DB에서 reply
+		BDto dto = null;
+		
+		return dto;
 	}
 }
