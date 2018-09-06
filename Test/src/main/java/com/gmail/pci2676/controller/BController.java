@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.gmail.pci2676.DAO.BDao;
 import com.gmail.pci2676.DTO.BDto;
-import com.gmail.pci2676.service.BService;
+import com.gmail.pci2676.service.IService;
 
 @Controller
 @RequestMapping(value = "/board/") // url요청이 /board/로 시작하는 것은 여기서 처리한다. ex) board/abc , board/123, board/create
 public class BController {
 
 	@Inject
-	private BService service;
+	private IService service;
 
 	@RequestMapping(value = "/insertContent", method = RequestMethod.GET)
 	public void insertContentGET(BDao dao, Model model) throws Exception {
