@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.gmail.pci2676.mappers.BoardMapper">
+
+	<insert id="insertContent">
+		INSERT INTO test_board (bId,bTitle,bName,bContent,bDate)
+		VALUES (#{bId},#{bTitle},#{bName},#{bContent},#{bDate})
+	</insert>
+
+	<select id="list" resultType="BDto">
+		SELECT *
+		FROM test_board
+		ORDER BY bId DESC;
+	</select>
+
+	<select id="read" resultType="BDto">
+		SELECT *
+		FROM test_board
+		WHERE bId = #{bId}
+	</select>
+
+	<delete id="delete">
+		DELETE
+		FROM test_board
+		WHERE bId = #{bId}
+	</delete>
+
+	<update id="modify">
+		UPDATE test_board
+		SET bTitle = #{bTitle}
+		WHERE bId = #{bId}
+	</update>
+
+</mapper>
