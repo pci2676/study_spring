@@ -4,6 +4,6 @@
 
 <configuration>
 	<typeAliases>
-		<package name="com.gmail.pci2676"/>
+		<package name="com.gmail.pci2676.DTO" />
 	</typeAliases>
 </configuration>

@@ -1,27 +1,25 @@
 package com.gmail.pci2676.DTO;
 
-import java.util.Date;
 
 public class BDto {
-	
+
 	int bId;
 	String bName;
 	String bTitle;
 	String bContent;
-	Date bDate;
+	// Date bDate;
 
-	
 	public BDto() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public BDto(int bId, String bName, String bTitle,String bContent,Date bDate) {
+
+	public BDto(int bId, String bName, String bTitle, String bContent) {
 		// TODO Auto-generated constructor stub
-		this.bId=bId;
-		this.bName=bName;
-		this.bTitle=bTitle;
-		this.bContent=bContent;
-		this.bDate=bDate;
+		this.bId = bId;
+		this.bName = bName;
+		this.bTitle = bTitle;
+		this.bContent = bContent;
+
 	}
 
 	public int getbId() {
@@ -56,13 +54,13 @@ public class BDto {
 		this.bContent = bContent;
 	}
 
-	public Date getbDate() {
-		return bDate;
-	}
+	// public Date getbDate() {
+	// return bDate;
+	// }
+	//
+	// public void setbDate(Date bDate) {
+	// this.bDate = bDate;
+	// }
+	//
 
-	public void setbDate(Date bDate) {
-		this.bDate = bDate;
-	}
-	
-	
 }

@@ -14,7 +14,7 @@ public class BDao implements IDao{
 	@Autowired  //의존 관계를 자동으로 연결한다.
 	private SqlSession sqlSession;
 	
-	private static final String namespace = "com.gmail.pci2676.mappers.BoardMapper"; 
+	private static final String namespace = "mappers.BoardMapper"; 
     //BoardMapper.xml의 namespace값
 	
 	@Override

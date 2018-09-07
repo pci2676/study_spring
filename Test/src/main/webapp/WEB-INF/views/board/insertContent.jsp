@@ -1,33 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
-    <title>°Ô½ÃÆÇ</title>
+    <title>ê²Œì‹œíŒ</title>
 </head>
 <body>
 <h1>
-    °Ô½ÃÆÇ µî·ÏÇÏ±â  
+    ê²Œì‹œíŒ ë“±ë¡í•˜ê¸°  
 </h1>
     
-    <form action="/board/insertContent" method="POST">
+    <form action="insertContent" method="post">
         <div class="insertForm">
-            <label >Á¦¸ñ</label>
-            <input type="text" name="bId" class="insertForm" placeholder = "Á¦¸ñ">
+            <label >ì œëª©</label>
+            <input type="text" name="bTitle" class="insertForm" placeholder = "ì œëª©">
         </div>
         <div class="insertForm">
-            <label >³»¿ë</label>
-            <textarea rows="4" cols="15" name="bContent" class="insertForm" placeholder = "³»¿ë"></textarea>
+            <label >ë‚´ìš©</label>
+            <textarea rows="4" cols="15" name="bContent" class="insertForm" placeholder = "ë‚´ìš©"></textarea>
         </div>
         <div class="insertForm">
-            <label >ÀÛ¼ºÀÚ</label>
-            <input type="text" name="bName" class="insertForm" placeholder = "ÀÛ¼ºÀÚ">
+            <label >ìž‘ì„±ìž</label>
+            <input type="text" name="bName" class="insertForm" placeholder = "ìž‘ì„±ìž">
         </div>
         
         <div class="Formfooter">
-                <button type="submit" class="btn_button">ÀÛ¼ºÇÏ±â</button>
+                <button type="submit" class="btn_button">ìž‘ì„±í•˜ê¸°</button>
         </div>            
         
     </form>
