@@ -8,20 +8,23 @@
 <mapper namespace="mappers.BoardMapper">
 
 	<insert id="insertContent">
-		INSERT INTO test_board (bId,bTitle,bName,bContent) 
+		INSERT INTO test_board (bId,bTitle,bName,bContent)
 		VALUES (#{bId},#{bTitle},#{bName},#{bContent})
 	</insert>
 
 	<select id="list" resultType="BDto">
+	<![CDATA[
 		SELECT *
 		FROM test_board
 		ORDER BY bId DESC;
+	]]>
 	</select>
 
 	<select id="read" resultType="BDto">
 		SELECT *
 		FROM test_board
-		WHERE bId = #{bId}
+		WHERE bId =
+		#{bId}
 	</select>
 
 	<delete id="delete">
@@ -32,8 +35,9 @@
 
 	<update id="modify">
 		UPDATE test_board
-		SET bTitle = #{bTitle}
-		WHERE bId = #{bId}
+		SET bContent = #{bContent}
+		WHERE bId =
+		#{bId}
 	</update>
 
 </mapper>

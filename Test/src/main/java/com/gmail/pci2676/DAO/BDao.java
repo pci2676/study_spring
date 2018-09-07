@@ -1,6 +1,6 @@
 package com.gmail.pci2676.DAO;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,17 +24,16 @@ public class BDao implements IDao{
 	}
 
 	@Override
-	public ArrayList<BDto> list() throws Exception {
+	public List<BDto> list() throws Exception {
 		// TODO Auto-generated method stub
-		sqlSession.selectList(namespace+".list");
-		return null;
+		
+		return sqlSession.selectList(namespace+".list");
 	}
 
 	@Override
 	public BDto read(int bId) throws Exception {
 		// TODO Auto-generated method stub
-		sqlSession.selectOne(namespace+".read",bId);
-		return null;
+		return sqlSession.selectOne(namespace+".read",bId);
 	}
 
 	@Override

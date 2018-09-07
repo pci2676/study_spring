@@ -1,6 +1,6 @@
 package com.gmail.pci2676.service;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -22,7 +22,7 @@ public class BService implements IService {
 	}
 
 	@Override
-	public ArrayList<BDto> list() throws Exception {
+	public List<BDto> list() throws Exception {
 		// TODO Auto-generated method stub
 		return dao.list();
 	}
