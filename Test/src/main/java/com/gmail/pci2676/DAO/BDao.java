@@ -45,7 +45,7 @@ public class BDao implements IDao{
 	@Override
 	public void modify(BDto dto) throws Exception {
 		// TODO Auto-generated method stub
-		sqlSession.update(namespace+".modift",dto);
+		sqlSession.update(namespace+".modify",dto);
 	}
 
 }

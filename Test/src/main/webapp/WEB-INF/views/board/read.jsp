@@ -12,6 +12,7 @@
 </head>
 <body>
 	<form action="modifyView" method="post">
+	<input type="hidden" name="bId" value="${BDto.bId}"/>
 		<table class="table table-board" border="1px" width="80%"
 			align="center">
 			<tr>
@@ -34,6 +35,7 @@
 				<td>
 					<button type="submit">수정</button>
 				</td>
+				<td><a href="delete?id=${BDto.bId}"><button type="button" name="deleteBtn" value="삭제"></button></a></td>
 			</tr>
 		</table>
 	</form>

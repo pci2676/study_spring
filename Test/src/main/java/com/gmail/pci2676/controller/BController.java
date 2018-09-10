@@ -2,6 +2,7 @@ package com.gmail.pci2676.controller;
 
 import javax.inject.Inject;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -55,18 +56,31 @@ public class BController {
 	}
 
 	@RequestMapping(value = "/modifyView", method = RequestMethod.POST)
-	public void modifyView(@RequestParam("bId") int bId, Model model) throws Exception {
+	public void modifyViewPOST(@RequestParam("bId") int bId, Model model) throws Exception {
 		System.out.println(bId);
 		System.out.println("글 번호" + bId + "번의 내용수정 뷰 페이지");
 
 		model.addAttribute(service.read(bId));
+		
 	}
 
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)
-	public void modify(@RequestParam("bId") int bId, Model model) throws Exception {
-		System.out.println(bId);
-		System.out.println("글 번호" + bId + "번의 내용수정 페이지");
-		BDto dto = null;
+	public String modify(BDto dto,RedirectAttributes rttr) throws Exception {
+		System.out.println("글 수정 중!");
 		
+		service.modify(dto);
+		rttr.addFlashAttribute("bId", dto.getbId());
+		
+		return "redirect:list";
+		
+	}
+	
+	@RequestMapping(value="/delete", method = RequestMethod.GET)
+	public String delete(@RequestParam("id")int bId) throws Exception{
+		System.out.println("삭제 작업 중 !");
+		
+		service.delete(bId);
+		
+		return "redirect:list";
 	}
 }

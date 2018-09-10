@@ -12,6 +12,9 @@
 </head>
 <body>
 	<form action="modify" method="post">
+	<input type="hidden" name="bId" value="${BDto.bId}"/>
+	<input type="hidden" name="bTitle" value="${BDto.bTitle}"/>
+	<input type="hidden" name="bName" value="${BDto.bName}"/>
 		<table class="table table-board" border="1px" width="80%"
 			align="center">
 			<tr>
